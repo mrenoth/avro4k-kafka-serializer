@@ -24,7 +24,7 @@ val Class<*>.avroRecordNames: List<String>
                     if (alias.contains('.')) {
                         alias
                     } else {
-                        "${naming.namespace}.$alias"
+                        "${naming.namespace}.$alias".removePrefix(".")
                     }
                 )
             }
